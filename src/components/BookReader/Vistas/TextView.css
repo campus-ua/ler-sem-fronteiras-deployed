@@ -1,0 +1,157 @@
+.text-view {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+/* ---------- CONTAINERS BASE ---------- */
+.illustration-container,
+.text-container {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  padding: 0;
+}
+
+.illustration-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 480px;
+}
+
+.text-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 280px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* ---------- TEXTO ---------- */
+.text-content {
+  color: var(--color-white-normal);
+  border-radius: 20px;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: left;
+  transform-origin: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggles */
+.serif-font {
+  font-family: "Times New Roman", serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.contrast {
+  background: #fff;
+  color: #000;
+}
+
+/* ---------- CONTROLOS (Botões) ---------- */
+.text-controls {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.text-controls button {
+  background: #222;
+  border: 2px solid #555;
+  color: #fff;
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.text-controls button:hover {
+  transform: scale(1.12);
+}
+
+.text-controls button.active {
+  background: #ffcc00;
+  color: black;
+  border-color: #ffcc00;
+}
+
+/* ---------- MODO SPLIT ---------- */
+.mode-split .text-container {
+  height: 480px;
+}
+
+/* ---------- MODO LEFT (sem controlos) ---------- */
+.mode-left {
+  gap: 0;
+  position: relative;
+}
+
+.mode-left .illustration-container {
+  height: 790px;
+}
+
+.mode-left .text-container {
+  position: absolute;
+  bottom: 20px;
+  right: calc((100% - 69.5%) / 2 + 20px);
+  width: 350px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0;
+}
+
+.mode-left .text-content {
+  font-size: 28px;
+  background: transparent;
+  box-shadow: none;
+  color: white;
+  padding: 10px;
+}
+
+/* ---------- MODO RIGHT ---------- */
+.mode-right .text-container {
+  height: 790px;
+}
+
+.mode-right .illustration-container {
+  position: absolute;
+  bottom: 135px;
+  right: calc((100% - 59.5%) / 2 + 20px);
+  width: 350px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* ---------- ANIMAÇÃO ---------- */
+.illustration-container,
+.text-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+  }
+}

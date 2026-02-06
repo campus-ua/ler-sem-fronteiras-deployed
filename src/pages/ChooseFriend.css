@@ -1,0 +1,27 @@
+.choose-friend {
+  min-height: 100vh;
+  background-color: var(--color-secondary-normal);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 80px 40px;
+  color: var(--color-black-normal);
+}
+
+/* título */
+.choose-friend h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* subtítulo */
+.choose-friend p {
+  font-size: 1.1rem;
+  color: var(--color-white-normal);
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 64px;
+}

@@ -1,0 +1,78 @@
+.friend-card {
+  font-family: "Roboto", sans-serif;
+  background: var(--color-white-normal);
+  border: none;
+  border-radius: 28px;
+  padding: 24px;
+  width: 280px;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.friend-card:hover {
+  border: 3px solid var(--color-black-normal);
+  background-color: var(--color-secondary-light-90);
+}
+
+.friend-image {
+  width: 240px;
+}
+
+/* selecionado */
+.friend-card.selected {
+  transform: scale(1.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/* desativado */
+.friend-card.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* header */
+.friend-header {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+  color: var(--color-black-normal);
+}
+
+.friend-header h3 {
+  font-size: 2.5rem;
+}
+
+.friend-header span {
+  font-size: 0.9rem;
+}
+
+.friend-text-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-text-wrapper .friend-text-card {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-black-normal);
+}
+
+.friend-card-info {
+  height: 22%;
+  margin-top: 20px;
+}

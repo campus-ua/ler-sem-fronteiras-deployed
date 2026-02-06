@@ -1,0 +1,162 @@
+.picto-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  gap: 30px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+/* --------------------
+   CONTAINERS COM ALTURA FIXA
+-------------------- */
+.illustration-container,
+.picto-container {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Container da ilustração - sempre com altura fixa */
+.illustration-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 480px;
+}
+
+/* Container do pictograma - sempre com altura fixa */
+.picto-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 280px;
+}
+
+/* --------------------
+   IMAGENS (CARDS BRANCOS)
+-------------------- */
+.illustration-container img {
+  background: var(--color-white-normal);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.picto-container img {
+  background: var(--color-white-normal);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------
+   MODO SPLIT (padrão)
+-------------------- */
+.mode-split .illustration-container {
+  height: 480px;
+}
+
+.mode-split .picto-container {
+  height: 280px;
+}
+
+/* --------------------
+   MODO LEFT
+-------------------- */
+.mode-left {
+  gap: 0;
+  position: relative;
+}
+
+.mode-left .illustration-container {
+  height: 790px; /* 480 + 30 + 280 */
+  width: 90%;
+  max-width: 1200px;
+  opacity: 1;
+  position: relative;
+}
+
+.mode-left .picto-container {
+  position: absolute;
+  bottom: 20px;
+  right: calc(
+    (100% - 69.5%) / 2 + 20px
+  ); /* Alinhado à direita da ilustração com margem */
+  width: 350px;
+  max-width: 1000px;
+  height: 200px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 0px;
+}
+
+.mode-left .picto-container img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+/* --------------------
+   MODO RIGHT
+-------------------- */
+.mode-right .picto-container {
+  height: 790px; /* 480 + 30 + 280 */
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.mode-right .picto-container img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.mode-right .illustration-container {
+  position: absolute;
+  bottom: 135px;
+  right: calc((100% - 59.5%) / 2 + 20px);
+  width: 350px;
+  max-width: 1000px;
+  height: 200px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0px;
+}
+
+/* --------------------
+   ANIMAÇÕES
+-------------------- */
+.illustration-container,
+.picto-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

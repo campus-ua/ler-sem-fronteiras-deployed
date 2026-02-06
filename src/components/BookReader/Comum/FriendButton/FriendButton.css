@@ -1,0 +1,95 @@
+.friend-control {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+/* ===== ESTADO FECHADO (círculo) ===== */
+
+.friend-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--color-text-secondary-light-bg);
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.friend-circle:hover {
+  background-color: var(--color-white-normal);
+}
+
+.friend-circle img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-circle img:hover {
+  transform: scale(1.08);
+}
+
+/* ===== ESTADO ABERTO (pill) ===== */
+
+.friend-pill-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 16px;
+  gap: 14px;
+  background: #0b0830;
+  border: 3px solid var(--color-text-secondary-light-bg);
+  border-radius: 999px;
+
+  backdrop-filter: blur(6px);
+}
+
+.friend-pill {
+  height: 50px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: transform 0.15s ease;
+}
+
+.friend-pill:hover {
+  transform: scale(1.08);
+}
+
+.friend-pill img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.friend-pill.active {
+  outline: 3px solid #7aa2ff;
+  outline-offset: 3px;
+}
+
+.friend-list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.friend-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.friend-current {
+  height: 50px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.friend-current img {
+  height: 100%;
+  object-fit: cover;
+}
