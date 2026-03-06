@@ -6,34 +6,28 @@
   width: 100%;
   height: 100%;
   max-width: 1200px;
+  max-height: 625px;
   gap: 30px;
   padding: 20px;
-  margin-bottom: 100px;
 }
 
 /* ---------- CONTAINERS BASE ---------- */
-.illustration-container,
+.text-illustration-container,
 .text-container {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);*/
   overflow: hidden;
   padding: 0;
 }
 
-.illustration-container {
-  width: 90%;
-  max-width: 1200px;
-  height: 480px;
-}
-
 .text-container {
-  width: 90%;
-  max-width: 1200px;
-  height: 280px;
+  /*width: 100%;*/
+  /*max-width: 1200px;*/
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   gap: 18px;
@@ -77,14 +71,17 @@
   border: 2px solid #555;
   color: #fff;
   font-size: 20px;
-  padding: 8px 14px;
-  border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  border-radius: 50px;
   cursor: pointer;
   transition: 0.2s;
 }
 
 .text-controls button:hover {
-  transform: scale(1.12);
+  background-color: var(--color-white-normal);
+  color: #000;
 }
 
 .text-controls button.active {
@@ -95,7 +92,16 @@
 
 /* ---------- MODO SPLIT ---------- */
 .mode-split .text-container {
-  height: 480px;
+  height: 100%;
+  width: 50%;
+}
+
+.mode-split .text-illustration-container {
+  height: 100%;
+}
+
+.mode-split .text-illustration-container img {
+  height: 100%;
 }
 
 /* ---------- MODO LEFT (sem controlos) ---------- */
@@ -104,7 +110,7 @@
   position: relative;
 }
 
-.mode-left .illustration-container {
+.mode-left .text-illustration-container {
   height: 790px;
 }
 
@@ -128,10 +134,11 @@
 
 /* ---------- MODO RIGHT ---------- */
 .mode-right .text-container {
-  height: 790px;
+  height: 100%;
+  width: 100%;
 }
 
-.mode-right .illustration-container {
+.mode-right .text-illustration-container {
   position: absolute;
   bottom: 135px;
   right: calc((100% - 59.5%) / 2 + 20px);
@@ -140,8 +147,12 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.mode-right .text-illustration-container {
+  height: 10%;
+}
+
 /* ---------- ANIMAÇÃO ---------- */
-.illustration-container,
+.text-illustration-container,
 .text-container {
   animation: fadeIn 0.5s ease-out;
 }

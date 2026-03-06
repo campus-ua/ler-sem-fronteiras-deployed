@@ -1,11 +1,12 @@
 .friend-card {
   font-family: "Roboto", sans-serif;
   background: var(--color-white-normal);
-  border: none;
+  border: 3px solid transparent;
   border-radius: 28px;
   padding: 24px;
   width: 280px;
-  height: 450px;
+  flex: 1 0 auto;
+  max-height: 450px;
 
   display: flex;
   flex-direction: column;
@@ -17,6 +18,8 @@
     transform 0.25s ease,
     opacity 0.25s ease,
     box-shadow 0.25s ease;
+
+  box-shadow: 0 3.477px 21.731px 0 rgba(0, 0, 0, 0.25);
 }
 
 .friend-card:hover {
@@ -58,6 +61,13 @@
   font-size: 0.9rem;
 }
 
+.friend-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
 .friend-text-wrapper {
   margin-top: 20px;
   display: flex;
@@ -73,6 +83,7 @@
 }
 
 .friend-card-info {
-  height: 22%;
-  margin-top: 20px;
+  height: 110px;
+  width: 240px;
+  object-fit: contain;
 }

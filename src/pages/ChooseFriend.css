@@ -5,9 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 80px 40px;
+  justify-content: center;
+  padding: 0 40px;
   color: var(--color-black-normal);
+}
+
+.choose-friend-header {
+  margin-bottom: 42px;
 }
 
 /* título */
@@ -23,5 +27,4 @@
   color: var(--color-white-normal);
   max-width: 600px;
   text-align: center;
-  margin-bottom: 64px;
 }

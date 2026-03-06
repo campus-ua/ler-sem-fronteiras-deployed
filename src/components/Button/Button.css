@@ -4,7 +4,7 @@
   border-radius: 999px;
   font-size: 1.3rem;
   cursor: pointer;
-  border: none;
+  border: 2px solid transparent;
   transition: all 0.2s ease;
 }
 

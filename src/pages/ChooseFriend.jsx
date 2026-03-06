@@ -13,13 +13,14 @@ export default function ChooseFriend() {
 
   return (
     <main className="choose-friend">
-      <h1>Escolhe um amigo para viajar contigo!</h1>
-      <p>
-        Antes de começares a viajar, fica a conhecer quem
-        <br />
-        te pode acompanhar nas tuas viagens...
-      </p>
-
+      <div className="choose-friend-header">
+        <h1>Escolhe um amigo para viajar contigo!</h1>
+        <p>
+          Antes de começares a viajar, fica a conhecer quem
+          <br />
+          te pode acompanhar nas tuas viagens...
+        </p>
+      </div>
       <FriendSelector onConfirm={handleConfirm} />
     </main>
   );

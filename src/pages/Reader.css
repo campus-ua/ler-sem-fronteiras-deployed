@@ -11,11 +11,6 @@
   flex-shrink: 0;
 }
 
-.reader-layout {
-  flex: 1;
-  min-height: 0;
-}
-
 .reader-header {
   width: 100%;
   display: flex;
@@ -24,7 +19,7 @@
 
 .reader-header-inner {
   width: 90%;
-  max-width: 1200px; /* MESMO VALOR DO PictoView */
+  max-width: 1200px;
 
   display: flex;
   align-items: center;
@@ -35,15 +30,4 @@
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.view-mode-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.view-mode-selector {
-  width: 90%;
-  max-width: 1200px;
 }

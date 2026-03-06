@@ -104,9 +104,7 @@ export default function Reader() {
         />
       </ReaderLayout>
 
-      <div className="view-mode-wrapper">
-        <ViewModeSelector activeMode={viewMode} onChangeMode={setViewMode} />
-      </div>
+      <ViewModeSelector activeMode={viewMode} onChangeMode={setViewMode} />
     </main>
   );
 }

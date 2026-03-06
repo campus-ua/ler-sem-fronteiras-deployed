@@ -28,17 +28,19 @@ export default function FriendCard({
       <div className="friend-content">
         <img className="friend-image" src={image} alt={name} />
 
-        {type === "Texto" ? (
-          <div className="friend-text-wrapper">
-            <p className="friend-text-card">Viajar com este amigo</p>
-          </div>
-        ) : (
-          <img
-            className="friend-card-info"
-            src={imageCard}
-            alt={`${name} card`}
-          />
-        )}
+        <div>
+          {type === "Texto" ? (
+            <div className="friend-text-wrapper">
+              <p className="friend-text-card">Viajar com este amigo</p>
+            </div>
+          ) : (
+            <img
+              className="friend-card-info"
+              src={imageCard}
+              alt={`${name} card`}
+            />
+          )}
+        </div>
       </div>
     </button>
   );

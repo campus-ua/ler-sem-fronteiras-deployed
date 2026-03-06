@@ -1,6 +1,6 @@
 .book {
   background-color: var(--color-white-normal);
-  padding: 80px 20px;
+  padding: 0px 20px 80px;
 }
 
 .book-content {
@@ -14,12 +14,33 @@
 }
 
 .book-cover img {
-  width: 300px;
+  width: 35%;
 }
 
 .book-description {
-  max-width: 500px;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
   margin-bottom: 40px;
+}
+
+.friends-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.friend-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 15px;
+  border: 2px solid var(--color-black-light-30);
+  border-radius: 50px;
+}
+
+.friend-info img {
+  width: 30px;
 }
