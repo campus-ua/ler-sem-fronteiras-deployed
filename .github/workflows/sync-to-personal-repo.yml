@@ -31,12 +31,12 @@ jobs:
         run: |
           git add -A
           git commit -m "Sync from original repo" || echo "No changes to commit"
-          git remote add ler-sem-fronteiras https://github.com/campus-reset/ler-sem-fronteiras.git
-          git push ler-sem-fronteiras HEAD:dev --force
+          git remote add ler-sem-fronteiras-deployed https://github.com/campus-ua/ler-sem-fronteiras-deployed.git
+          git push ler-sem-fronteiras-deployed HEAD:dev --force
 
-      - name: Trigger SerMais CI/CD in ler-sem-fronteiras repo
+      - name: Trigger SerMais CI/CD in ler-sem-fronteiras-deployed repo
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
-          repository: campus-reset/ler-sem-fronteiras
+          repository: campus-ua/ler-sem-fronteiras-deployed
           event-type: sync-completed
